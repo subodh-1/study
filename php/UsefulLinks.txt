@@ -1,0 +1,5 @@
+1. PHP interview fundamentals:
+https://github.com/ahmed-bermawy/backend-interview-questions?tab=readme-ov-file
+
+2. PHP Algorithms:
+https://github.com/doganoo/PHPAlgorithms/tree/master

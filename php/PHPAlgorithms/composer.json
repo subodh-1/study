@@ -1,0 +1,53 @@
+{
+  "name": "doganoo/php-algorithms",
+  "description": "A collection of common algorithms implemented in PHP. The collection is based on \"Cracking the Coding Interview\" by Gayle Laakmann McDowell",
+  "license": "MIT",
+  "type": "library",
+  "keywords": [
+    "algorithms",
+    "data structures"
+  ],
+  "authors": [
+    {
+      "name": "Dogan Ucar",
+      "email": "dogan@dogan-ucar.de",
+      "homepage": "https://www.dogan-ucar.de"
+    }
+  ],
+  "homepage": "https://www.dogan-ucar.de/phpalgorithms-2/",
+  "require": {
+    "php": ">=8.0",
+    "ext-json": "*",
+    "doganoo/php-util": "0.5.*"
+  },
+  "conflict": {
+    "stevebauman/unfinalize": "*"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.9",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "phpstan/phpstan": "^0.12.54",
+    "phpunit/phpunit": "^8.0",
+    "roave/security-advisories": "dev-latest",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "doganoo\\PHPAlgorithms\\": "src/",
+      "doganoo\\PHPAlgorithmsTest\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+    "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+    "add-php-compatibility": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+    "php-compatibility": "./vendor/bin/phpcs -p . --standard=PHPCompatibility --runtime-set testVersion 7.4-8.1 --extensions=php --ignore=vendor/",
+    "phpstan": "vendor/bin/phpstan analyse --level=8 --memory-limit=2G src tests",
+    "test": "vendor/bin/phpunit tests"
+  }
+}
