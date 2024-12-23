@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFI Form</title>
+</head>
+<body>
+  <h1>RFI Form</h1>
+  <form action="/submit" method="POST">
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="rfi[subject]" value="Wall Color" required><br><br>
+
+    <label for="reference">Reference:</label>
+    <input type="text" id="reference" name="rfi[reference]" value="Color of the kitchen wall" required><br><br>
+
+    <label for="assignee_id">Assignee ID:</label>
+    <input type="number" id="assignee_id" name="rfi[assignee_id]" value="42" required><br><br>
+
+    <label for="due_date">Due Date:</label>
+    <input type="date" id="due_date" name="rfi[due_date]" value="2021-07-26" required><br><br>
+
+    <label for="received_from_login_information_id">Received From Login Information ID:</label>
+    <input type="number" id="received_from_login_information_id" name="rfi[received_from_login_information_id]" value="123" required><br><br>
+
+    <label for="responsible_contractor_id">Responsible Contractor ID:</label>
+    <input type="number" id="responsible_contractor_id" name="rfi[responsible_contractor_id]" value="123" required><br><br>
+
+    <label for="number">Number:</label>
+    <input type="text" id="number" name="rfi[number]" value="1234" required><br><br>
+
+    <label for="private">Private:</label>
+    <input type="checkbox" id="private" name="rfi[private]"><br><br>
+
+    <label for="project_stage_id">Project Stage ID:</label>
+    <input type="number" id="project_stage_id" name="rfi[project_stage_id]" value="21" required><br><br>
+
+    <label for="schedule_impact_status">Schedule Impact Status:</label>
+    <select id="schedule_impact_status" name="rfi[schedule_impact][status]">
+      <option value="yes_known" selected>Yes (Known)</option>
+      <option value="no">No</option>
+    </select><br><br>
+
+    <label for="schedule_impact_value">Schedule Impact Value:</label>
+    <input type="number" id="schedule_impact_value" name="rfi[schedule_impact][value]" value="0" step="0.01"><br><br>
+
+    <label for="cost_impact_status">Cost Impact Status:</label>
+    <select id="cost_impact_status" name="rfi[cost_impact][status]">
+      <option value="yes_known" selected>Yes (Known)</option>
+      <option value="no">No</option>
+    </select><br><br>
+
+    <label for="cost_impact_value">Cost Impact Value:</label>
+    <input type="number" id="cost_impact_value" name="rfi[cost_impact][value]" value="12039.55" step="0.01"><br><br>
+
+    <label for="location_id">Location ID:</label>
+    <input type="number" id="location_id" name="rfi[location_id]" value="123" required><br><br>
+
+    <label for="drawing_number">Drawing Number:</label>
+    <input type="text" id="drawing_number" name="rfi[drawing_number]" value="1A" required><br><br>
+
+    <label for="specification_section_id">Specification Section ID:</label>
+    <input type="number" id="specification_section_id" name="rfi[specification_section_id]" value="123" required><br><br>
+
+    <label for="cost_code_id">Cost Code ID:</label>
+    <input type="number" id="cost_code_id" name="rfi[cost_code_id]" value="123" required><br><br>
+
+    <label for="rfi_manager_id">RFI Manager ID:</label>
+    <input type="number" id="rfi_manager_id" name="rfi[rfi_manager_id]" value="1" required><br><br>
+
+    <label for="question_body">Question:</label>
+    <textarea id="question_body" name="rfi[question][body]" required>What color should the kitchen wall be?</textarea><br><br>
+
+    <label for="custom_textfield_1">Custom Textfield 1:</label>
+    <input type="text" id="custom_textfield_1" name="rfi[custom_textfield_1]" value="string"><br><br>
+
+    <label for="custom_textfield_2">Custom Textfield 2:</label>
+    <input type="text" id="custom_textfield_2" name="rfi[custom_textfield_2]" value="string"><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
