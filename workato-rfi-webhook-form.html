@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>RFI Form</h1>
-  <form action="https://webhooks.workato.com/webhooks/rest/ce2b2a5a-99ed-4325-afae-af537fca812c/action-rfi-file-upload" method="POST">
+  <form action="https://webhooks.workato.com/webhooks/rest/ce2b2a5a-99ed-4325-afae-af537fca812c/action-rfi-file-upload" method="POST" enctype="multipart/form-data">
     <label for="subject">Subject:</label>
     <input type="text" id="subject" name="rfi[subject]" value="Wall Color" required><br><br>
 
@@ -70,6 +70,12 @@
 
     <label for="question_body">Question:</label>
     <textarea id="question_body" name="rfi[question][body]" required>What color should the kitchen wall be?</textarea><br><br>
+
+    <label for="attachments">Attachments:</label>
+    <input type="file" id="attachments" name="rfi[question][attachments][]" multiple><br><br>
+
+    <label for="attachment_ids">Attachment IDs:</label>
+    <input type="text" id="attachment_ids" name="rfi[question][attachment_ids]" value="42"><br><br>
 
     <label for="custom_textfield_1">Custom Textfield 1:</label>
     <input type="text" id="custom_textfield_1" name="rfi[custom_textfield_1]" value="string"><br><br>
